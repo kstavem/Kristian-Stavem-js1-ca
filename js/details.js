@@ -7,8 +7,8 @@ const heading = document.querySelector("h1");
 const url = "https://api.pathofexile.com/ladders/Hardcore Heist?accountName=" + accountName;
 
 function clickedToFront(id, arr){                    // If the player has more characters on the ladder
-    for (let i =  0; i < arr.length; i++) {          // this moves the character you clicked to the top
-        if (arr[i].character.id === id) {            // on his "profile" in details.html
+    for (let i =  0; i < arr.length; i++) {          // this moves the character you clicked on index.html 
+        if (arr[i].character.id === id) {            // to the top on his "profile" in details.html
             let toFront = arr.splice(i, 1);
             arr.unshift(toFront[0]);
             break;
