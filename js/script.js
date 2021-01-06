@@ -1,5 +1,5 @@
 const container = document.querySelector(".ladder");
-const url = "https://api.pathofexile.com/leagues/Hardcore Heist?ladder=1&ladderOffset=13125";
+const url = "https://api.pathofexile.com/leagues/Hardcore Heist?ladder=1&ladderOffset=12980";
 
 async function ladderAPI() {
     try {
@@ -13,8 +13,8 @@ async function ladderAPI() {
             const charName = `${ladder[i].character.name}`;
             const charLvl = `${ladder[i].character.level}`;
             const charCLass = `${ladder[i].character.class}`;
-            const charID = `${ladder[i].character.id}`;     // querystring
             const charRank = `${ladder[i].rank}`;
+            const charID = `${ladder[i].character.id}`;     // querystring
             const accName = `${ladder[i].account.name}`;    // querystring
 
             let charHealth;
@@ -24,14 +24,14 @@ async function ladderAPI() {
                 charHealth = "alive";
             };
 
-            let charStatus;                                  // red/green dot in front of charactername
+            let charStatus;                                  // red or green dot in front of charactername to show online status
             if (ladder[i].online) {
                 charStatus = "online";
             } else {
                 charStatus = "offline"
             }
 
-            if (i === 9) {
+            if (i === 15) {
                 break;
             }
 

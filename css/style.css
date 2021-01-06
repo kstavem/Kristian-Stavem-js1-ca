@@ -58,11 +58,12 @@ body {
   header {
     min-height: 80px;
     text-align: center;
+    background-color: rgb(235, 232, 223);
   }
 
   nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
   }
 
@@ -77,11 +78,6 @@ h1,h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(44, 45, 59);
 }
-
-h1 {
-  padding: 1rem 0;
-}
-
 h2 {
   font-size: 1.3rem;
   padding: 1rem;
@@ -92,6 +88,11 @@ h2 {
     width: 1140px;
     min-height: calc(100vh - 80px);
     background-color: #fff;
+    display: flex;
+}
+
+.flex-col {
+  flex-flow: column;
 }
 
 .error {
@@ -160,18 +161,21 @@ a:hover {
   margin-top: 1rem;
 }
 
-.character:nth-of-type(1),
 .character:nth-of-type(2),
-.character:nth-of-type(4),
 .character:nth-of-type(5),
-.character:nth-of-type(7),
-.character:nth-of-type(8) {
+.character:nth-of-type(8),
+.character:nth-of-type(11),
+.character:nth-of-type(14) {
   border-right: 2px solid rgb(44, 45, 59);
+  border-left: 2px solid rgb(44, 45, 59);
 }
 
 .character:nth-of-type(4),
 .character:nth-of-type(5),
-.character:nth-of-type(6) {
+.character:nth-of-type(6),
+.character:nth-of-type(10),
+.character:nth-of-type(11),
+.character:nth-of-type(12) {
   border-top: 2px solid rgb(44, 45, 59);
   border-bottom: 2px solid rgb(44, 45, 59);
 }

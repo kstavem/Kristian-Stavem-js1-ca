@@ -1,2 +1,12 @@
 http://api.pathofexile.com/leagues/Hardcore Heist?ladder=1&ladderOffset=13125    //Heist HC Ladder
 http://api.pathofexile.com/ladders/Hardcore Heist?accountName=                   // accountName and id params
+
+
+ <div class="details">
+                                        <h2>${characters[i].character.name}</h2>
+                                        <p>Level <strong>${characters[i].character.level}</strong> ${characters[i].character.class}
+                                        </p> 
+                                        <p><strong>${characters[i].character.experience}</strong> total experience gained.</p>
+                                        <p>Character is currently <span class="${charHealth}"><strong>${charHealth}</strong></span>
+                                         at rank <strong>${characters[i].rank}</strong></p>
+                                    </div> 
