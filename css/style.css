@@ -78,6 +78,11 @@ h1,h2 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(44, 45, 59);
 }
+
+h1 {
+  margin: 2rem;
+}
+
 h2 {
   font-size: 1.3rem;
   padding: 1rem;
@@ -145,20 +150,36 @@ a:hover {
 
 .allchars {
   display: flex;
-  flex-flow: column nowrap;
-  align-content: center;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
   margin: 0 auto;
-  width: 40%;
 }
 
 .details {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column;
   justify-content: center;
   text-align: center;
   border: 2px solid rgb(44, 45, 59);
   padding: 2rem;
+  margin-bottom: 1rem;
+  width: 400px;
+}
+
+.featured {
+  border: 4px solid greenyellow;
+  min-width: 912px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
   margin-top: 1rem;
+}
+
+hr {
+  width: 80%;
+  margin: 2rem 0;
 }
 
 .character:nth-of-type(2),

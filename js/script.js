@@ -24,7 +24,7 @@ async function ladderAPI() {
                 charHealth = "alive";
             };
 
-            let charStatus;                                  // red or green dot in front of charactername to show online status
+            let charStatus;                    // red or green dot in front of charactername to show online status
             if (ladder[i].online) {
                 charStatus = "online";
             } else {
