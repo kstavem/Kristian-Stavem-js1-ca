@@ -35,15 +35,43 @@ async function ladderAPI() {
                 break;
             }
 
-            container.innerHTML += `
-                                    <a class="character" href="details.html?id=${charID}&accountName=${accName}">
-                                    <h2><span class="${charStatus}">&#9679;</span>${charName}</h2>
-                                    <p>Level <strong>${charLvl}</strong> ${charCLass}</p>
-                                    <p>Ranked <strong>${charRank}</strong> on ${result.id} ladder</p>
-                                    <p>Character is <span class="${charHealth}"><strong>${charHealth}</strong></span></p>
-                                    <p>Account owner: ${accName}</p>
-                                    </a>
-                                   `
+            if (i === 0) {
+                container.innerHTML = `
+                                        <thead>
+                                            <tr>
+                                                <th>Rank</th>                                        
+                                                <th>Account</th>                                        
+                                                <th>Character</th>                                        
+                                                <th>Level</th>                                        
+                                                <th>Class</th>                                        
+                                                <th>Status</th>                                        
+                                            </tr>
+                                        </thead>
+                                        <tbody class="ladderentries"></tbody>
+                                      `
+            }
+
+            const entries = document.querySelector(".ladderentries");
+            let ladderStyle = ""
+
+            if (i % 2 === 0) {
+                ladderStyle = "bg-grey";
+            }
+
+            entries.innerHTML += `
+                                        <tr class="${ladderStyle}">
+                                            <td><strong>${charRank}</strong></td>
+                                            <td>
+                                                <a href="details.html?id=${charID}&accountName=${accName}">
+                                                    <span class="${charStatus}">&#9679;</span>${accName.toUpperCase()}
+                                                </a>
+                                            </td>
+                                            <td>${charName}</td>
+                                            <td><strong>${charLvl}</strong></td>
+                                            <td>${charCLass}</td>
+                                            <td class="${charHealth}"><strong>${charHealth}</strong></td>                                            
+                                        </tr>
+                                    `
         }
     }
     catch (err) {

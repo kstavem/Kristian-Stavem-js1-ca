@@ -55,26 +55,25 @@ body {
       background-color: rgb(187, 193, 255);
   }
 
-  header {
+header {
     min-height: 80px;
     text-align: center;
     background-color: rgb(235, 232, 223);
   }
 
-  nav {
+nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
   }
 
-  nav a {
+nav a {
     font-size: 2rem;
     padding: 1.2rem 0;
     text-decoration: none;
   }
 
 h1,h2 {
-    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(44, 45, 59);
 }
@@ -85,15 +84,15 @@ h1 {
 
 h2 {
   font-size: 1.3rem;
-  padding: 1rem;
+  padding: 2rem;
+  text-align: center;
 }
 
 .wrapper {
     margin: 0 auto;
-    width: 1140px;
+    width: 1260px;
     min-height: calc(100vh - 80px);
     background-color: #fff;
-    display: flex;
 }
 
 .flex-col {
@@ -126,26 +125,54 @@ h2 {
 }
 
 .ladder {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+  margin: 0 auto;
 }
 
 .ladder a {
   text-decoration: none;
 }
 
-a:hover {
+.ladder a:hover {
   text-decoration: underline;
 }
 
-.character {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    text-align: center;
-    width: 30%;
-    min-height: 200px;
+table {
+  font-size: 1.2rem;
+  padding: 2rem;
+  text-align: left;
+}
+
+thead {
+  font-size: 1.3rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+  background-color: black;
+}
+
+thead th {
+  padding: 2rem;
+}
+
+tbody:before {
+  content:"@";
+  display:block;
+  line-height:12px;
+  text-indent:-99999px;
+}
+
+td {
+  padding: 2rem;
+  min-width: 100px;
+  text-align: left;
+
+}
+
+.bg-grey {
+  background-color:rgb(187, 193, 255);
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .allchars {
@@ -182,25 +209,6 @@ hr {
   margin: 2rem 0;
 }
 
-.character:nth-of-type(2),
-.character:nth-of-type(5),
-.character:nth-of-type(8),
-.character:nth-of-type(11),
-.character:nth-of-type(14) {
-  border-right: 2px solid rgb(44, 45, 59);
-  border-left: 2px solid rgb(44, 45, 59);
-}
-
-.character:nth-of-type(4),
-.character:nth-of-type(5),
-.character:nth-of-type(6),
-.character:nth-of-type(10),
-.character:nth-of-type(11),
-.character:nth-of-type(12) {
-  border-top: 2px solid rgb(44, 45, 59);
-  border-bottom: 2px solid rgb(44, 45, 59);
-}
-
 p {
   color: black;
 }
@@ -210,7 +218,15 @@ p {
   text-transform: uppercase;
 }
 
+.offline, .online {
+  margin-right: 1rem;
+}
+
 .alive, .online {
   color: green;
   text-transform: uppercase;
+}
+
+.center {
+  text-align: center;
 }
